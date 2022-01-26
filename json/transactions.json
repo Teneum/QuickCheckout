@@ -1,0 +1,25 @@
+{
+    "Total_Transactions": 2,
+    "1-20012022-153929": {
+        "CustomerName": "Shashank Shukla",
+        "CustomerPhone": "36231235",
+        "Date": "20/01/2022 15-39-29",
+        "Items": {
+            "Kurkure": 5,
+            "Aquafina Water": 40
+        },
+        "Total": 126.5,
+        "CashierID": "admin"
+    },
+    "2-25012022-150518": {
+        "CustomerName": "Pratima Shukla",
+        "CustomerPhone": "33326123",
+        "Date": "25/01/2022 15-05-18",
+        "Items": {
+            "Society Tea": 2,
+            "Water": 1
+        },
+        "Total": 2.4200000000000004,
+        "CashierID": "admin"
+    }
+}

@@ -49,10 +49,15 @@ class LoginPage:
                     MainPage(userid=userid, master=self.master)
 
         else:
-            if self.counter == 3:
-                messagebox.showerror("Error!", "Default Credentials:\nUserID: admin\nPassword: password",
-                                     parent=self.root)
+
+            if len(userinfo.admin_list()) > 1:
+                pass
+            
             else:
-                self.counter += 1
-                self.message = Label(self.root, text='Username or Password incorrect. Try again!', fg='Red')
-                self.message.place(x=20, y=100)
+                if self.counter == 3:
+                        messagebox.showerror("Error!", "Default Credentials:\nUserID: admin\nPassword: password",
+                                             parent=self.root)
+                else:
+                    self.counter += 1
+                    self.message = Label(self.root, text='Username or Password incorrect. Try again!', fg='Red')
+                    self.message.place(x=20, y=100)

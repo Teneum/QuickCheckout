@@ -186,6 +186,13 @@ class UserData:
         else:
             return False
 
+    def admin_list(self):
+        self.c.execute("""
+        SELECT employeeID FROM users WHERE accountType = 'admin'
+        """)
+        results = self.c.fetchall()
+        return results
+
     def emplist(self):
         """
         Returns a list of employee names.

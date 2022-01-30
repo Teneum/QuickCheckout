@@ -32,7 +32,7 @@ class AdminMainPage:
         self.itemview = ItemView()
         self.empview = EmpView()
 
-        self.empview.construct(root=self.root, userid=self.UserID)
+        self.billview.construct(root=self.root, userid=self.UserID)
         menu = Menu(self.root)
         self.root.config(menu=menu)
         mainmenu = Menu(menu)

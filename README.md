@@ -1,6 +1,8 @@
 # QuickCheckout
-
 Project with objective of creating an EPoS (Electronic Point of Sale, modern day till system) for supermarkets.
+
+# Start
+To start, run main.py 
 
 # Features
 * Checkout Window

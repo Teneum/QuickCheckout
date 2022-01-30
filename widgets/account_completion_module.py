@@ -74,6 +74,11 @@ class Register:
         # Registration Button
         Button(frame1, text='REGISTER', command=self.finish_register, activebackground= 'green').place(x=220, y=420)
 
+        def on_closing():
+            if messagebox.askokcancel("Quit", "Do you want to quit?"):
+                self.root.destroy()
+                sys.exit()
+        self.root.protocol("WM_DELETE_WINDOW", on_closing)
 
     def finish_register(self):
         nationality = self.txt_nationality.get()

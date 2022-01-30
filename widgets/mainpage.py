@@ -1,7 +1,4 @@
-from tkinter import *
-import tkinter as tk
-from DataFunc.accountmanagement import UserData
-
+import sys
 from frames.invoice import *
 from frames.billviewer import *
 from frames.itemviewer import *
@@ -18,6 +15,12 @@ class MainPage:
         self.billapp = BillApp()
         self.billapp.construct(root=self.root, userid=self.UserID)
 
+        def on_closing():
+            if messagebox.askokcancel("Quit", "Do you want to quit?"):
+                self.root.destroy()
+                sys.exit()
+        self.root.protocol("WM_DELETE_WINDOW", on_closing)
+
 class AdminMainPage:
     def __init__(self, userid, master):
         super().__init__()
@@ -32,7 +35,7 @@ class AdminMainPage:
         self.itemview = ItemView()
         self.empview = EmpView()
 
-        self.billview.construct(root=self.root, userid=self.UserID)
+        self.billapp.construct(root=self.root, userid=self.UserID)
         menu = Menu(self.root)
         self.root.config(menu=menu)
         mainmenu = Menu(menu)
@@ -44,6 +47,13 @@ class AdminMainPage:
         mainmenu.add_command(label="Item Management", command=self.command_itemview)
         mainmenu.add_separator()
         mainmenu.add_command(label="Employee Management", command=self.command_empview)
+
+        def on_closing():
+            if messagebox.askokcancel("Quit", "Do you want to quit?"):
+                self.root.destroy()
+                sys.exit()
+        self.root.protocol("WM_DELETE_WINDOW", on_closing)
+
 
     def command_billapp(self):
         self.hideallframe()

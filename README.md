@@ -3,6 +3,9 @@ Project with objective of creating an EPoS (Electronic Point of Sale, modern day
 
 # Start
 To start, run main.py 
+Default Credentials:
+Username = admin
+Password = password
 
 # Features
 * Checkout Window

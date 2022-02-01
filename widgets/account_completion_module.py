@@ -94,8 +94,8 @@ class Register:
         if condition == 0:
             messagebox.showerror("Error!", "All Fields are Required!", parent=self.root)
         else:
-            userinfo.registration(userID= self.UserID, name= name, nationality= nationality, gender=
-                                  gender, age= age, contactAddress= email, contactNumber= contact)
+            userinfo.registration(userID=self.UserID, name=name, nationality=nationality, gender=
+                                  gender, age=age, contactAddress=email, contactNumber=contact)
             userinfo.update_password(ID=self.UserID, password=password)
             userinfo.update_acc_complete(ID=self.UserID)
             self.root.destroy()

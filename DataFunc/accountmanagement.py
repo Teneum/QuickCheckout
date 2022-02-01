@@ -103,7 +103,6 @@ class UserData:
             """, (userID, username, accountType, encrypted_password, date, acccompl))
             self.conn.commit()
             self.set_mod_details(employeeID=userID)
-            self.registration(userID=userID)
             return "User Created"
         else:
             return "User Exists"
